@@ -6,7 +6,11 @@ body {
 }
 
 #container {
+  margin: 25px 175px;
   display: grid;
+  grid-template-columns: repeat(4, 1.5fr);
+  grid-auto-rows: minmax(225px, auto);
+  grid-gap: 20px;
 }
 
 .projectImage {
@@ -14,9 +18,15 @@ body {
   // margin: 25px;
   margin: 5px;
   text-align: center;
-  width: 225px;
-  height: 225px;
   background-size: cover;
   background-position: center;
   border-radius: 50px;
+}
+
+#long-row {
+  grid-row: span 2;
+}
+
+#mid-row {
+  grid-row: span 1.5;
 }
