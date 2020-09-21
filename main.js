@@ -80,3 +80,19 @@ const projects = () => [
     image: '/images/design-shirt.jpg'
   },
 ];
+
+const getProjects = () => projects;
+
+const buildCards = (array) => {
+  for (let project = 0; project < array.length; project ++) {
+    $('#container').append(
+      `<div class="projectImage" style="background-image: url(${project.image})"></div>`
+    )
+  };
+  // array.forEach((project) => {
+  //   $('#container').append(
+  //     `<div class="projectImage" style="background-image: url(${project.image})"></div>`
+  // )});
+};
+
+buildCards(projects);
